@@ -19,7 +19,7 @@ RETURN n1, n2, n3
 --*** LAY CAY NHAN SU O THOI DIEM HIEN TAI
 MATCH (n:Emp3)
 WHERE n.to IS NULL
-MATCH (:Emp3)-[r:IS_MANAGER_OF]-(:Emp3)
+OPTIONAL MATCH (:Emp3)-[r:IS_MANAGER_OF]-(:Emp3)
 WHERE r.to IS NULL
 RETURN n, r
 
@@ -38,7 +38,7 @@ RETURN n1,n2,n4
 MATCH (n:Emp3)
 WHERE n.from <= 2000
 	AND (n.to IS NULL OR n.to >= 2000)
-MATCH (:Emp3)-[r:IS_MANAGER_OF]-(:Emp3)
+OPTIONAL MATCH (:Emp3)-[r:IS_MANAGER_OF]-(:Emp3)
 WHERE r.from <= 2000
 	AND (r.to IS NULL OR r.to >= 2000)
 RETURN n, r
@@ -49,7 +49,7 @@ RETURN n, r
 MATCH (n:Emp3)
 WHERE n.from <= 2020
 	AND (n.to IS NULL OR n.to >= 2020)
-MATCH (:Emp3)-[r:IS_MANAGER_OF]-(:Emp3)
+OPTIONAL MATCH (:Emp3)-[r:IS_MANAGER_OF]-(:Emp3)
 WHERE r.from <= 2020
 	AND (r.to IS NULL OR r.to >= 2020)
 RETURN n, r
