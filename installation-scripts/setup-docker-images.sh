@@ -3,7 +3,7 @@
 # Pull images
 echo 'Pulling neo4j images'
 docker pull neo4j:4.0.4
-docker pull neo4j:3.5.17
+docker pull neo4j:3.5.3
 echo 'Pulling postgres images'
 docker pull postgres:12.2
 docker pull postgres:11.7
