@@ -3,6 +3,7 @@
 export NEO4J_HTTP_PORT=7474
 export NEO4J_BOLT_PORT=7687
 sudo docker run \
+	--name neo4j-v3 \
 	--restart unless-stopped \
 	-d \
 	-p $NEO4J_HTTP_PORT:$NEO4J_HTTP_PORT \
