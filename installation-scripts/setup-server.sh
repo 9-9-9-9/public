@@ -8,7 +8,7 @@ sudo yum install docker -y
 
 # Config to run docker without sudo
 sudo groupadd docker
-sudo gpasswd -a $USER docker
+sudo gpasswd -a vpsadmin docker
 sudo service docker restart
 
 echo 'Please re-log'
