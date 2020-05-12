@@ -8,6 +8,7 @@ sudo docker run \
 	-p $NEO4J_HTTP_PORT:$NEO4J_HTTP_PORT \
 	-p $NEO4J_BOLT_PORT:$NEO4J_BOLT_PORT \
 	-v neo4j-v3:/data/db \
+	-v conf-neo4j-v3:/conf \
 	--env NEO4J_AUTH=neo4j/1234567 \
 	neo4j:3.5.3
 
