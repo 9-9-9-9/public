@@ -14,7 +14,10 @@ docker pull postgres:9.6
 echo 'Creating volumes'
 docker volume create neo4j-v3
 docker volume create neo4j-v4
+docker volume create conf-neo4j-v3
+docker volume create conf-neo4j-v4
 docker volume create postgres
+docker volume create conf-postgres
 
 # Install additional tools
 sudo yum install nmap -y
