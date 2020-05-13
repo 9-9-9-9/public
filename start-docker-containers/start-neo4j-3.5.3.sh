@@ -23,6 +23,7 @@ echo 'Waiting container (5s)'
 sleep 5
 
 docker exec -it $CONTAINER_NEO4J_3_NAME rm -f /var/lib/neo4j/data/dbms/auth
+docker exec -it $CONTAINER_NEO4J_3_NAME rm -f /data/dbms/auth
 echo 'Copying neo4j.conf from (default) /var/lib/neo4j/conf/neo4j.conf to /conf/neo4j.conf'
 docker exec -it $CONTAINER_NEO4J_3_NAME cp /var/lib/neo4j/conf/neo4j.conf /conf
 #docker exec -it $CONTAINER_NEO4J_3_NAME echo -e '\ndbms.active_database=sales_structure.db' /conf/neo4j.conf
