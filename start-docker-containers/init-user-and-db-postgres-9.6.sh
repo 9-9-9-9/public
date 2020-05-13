@@ -19,6 +19,11 @@ PGPASSWORD=$POSTGRES_PWD psql \
 PGPASSWORD=$POSTGRES_PWD psql \
 	--host=127.0.0.1 --port=5432 \
 	--username=postgres \
+	--command="REVOKE ALL ON DATABASE postgres FROM PUBLIC;"
+
+PGPASSWORD=$POSTGRES_PWD psql \
+	--host=127.0.0.1 --port=5432 \
+	--username=postgres \
 	--command="CREATE USER $POSTGRES_USER_SALES_STRUCTURE WITH PASSWORD '$POSTGRES_USERPASS_SALES_STRUCTURE';"
 
 PGPASSWORD=$POSTGRES_PWD psql \
