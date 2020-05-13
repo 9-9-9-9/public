@@ -9,7 +9,7 @@ sudo yum install -y postgresql96
 PGPASSWORD=$POSTGRES_PWD psql \
 	--host=127.0.0.1 --port=5432 \
 	--username=postgres \
-	--command="REVOKE ALL ON postgres FROM PUBLIC;"
+	--command="REVOKE ALL ON DATABASE postgres FROM PUBLIC;"
 
 PGPASSWORD=$POSTGRES_PWD createdb \
 	--host=127.0.0.1 --port=5432 \
