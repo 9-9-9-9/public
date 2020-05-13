@@ -14,9 +14,9 @@ docker run \
 	-v neo4j-v3:/data \
 	-v conf-neo4j-v3:/conf \
 	-e NEO4J_AUTH=$NEO4J_USERNAME/$NEO4J_PWD \
-    -e NEO4J_dbms_security_procedures_unrestricted=apoc.* \
-    -e NEO4J_apoc_import_file_enabled=true \
-    -e NEO4J_apoc_export_file_enabled=true \
+	-e NEO4J_dbms_security_procedures_unrestricted=apoc.* \
+	-e NEO4J_apoc_import_file_enabled=true \
+	-e NEO4J_apoc_export_file_enabled=true \
 	neo4j:3.5.3
 
 echo 'Waiting container (10s)'
@@ -24,8 +24,10 @@ sleep 5
 echo 'Waiting container (5s)'
 sleep 5
 
+echo 'Copying neo4j.conf from (default) /var/lib/neo4j/conf/neo4j.conf to /conf/neo4j.conf'
 docker exec -it $CONTAINER_NEO4J_3_NAME cp /var/lib/neo4j/conf/neo4j.conf /conf
-docker exec -it $CONTAINER_NEO4J_3_NAME echo -e '\ndbms.active_database=sales_structure.db' /conf/neo4j.conf
+#docker exec -it $CONTAINER_NEO4J_3_NAME echo -e '\ndbms.active_database=sales_structure.db' /conf/neo4j.conf
+
 
 docker restart $CONTAINER_NEO4J_3_NAME
 
