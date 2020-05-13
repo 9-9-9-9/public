@@ -9,7 +9,7 @@ sudo docker run \
 	--restart unless-stopped \
 	-d \
 	-p $POSTGRES_PORT:$POSTGRES_PORT \
-	-v postgres:/data/db \
+	-v postgres:/var/lib/postgresql/data \
 	-e POSTGRES_PASSWORD=$POSTGRES_PWD \
 	postgres:9.6
 
