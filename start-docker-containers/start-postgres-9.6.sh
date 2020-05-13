@@ -5,7 +5,7 @@ source ./my-env.sh
 export POSTGRES_PORT=5432
 
 sudo docker run \
-	--name postgres-v9 \
+	--name $CONTAINER_POSTGRES_9_NAME \
 	--restart unless-stopped \
 	-d \
 	-p $POSTGRES_PORT:$POSTGRES_PORT \
