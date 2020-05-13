@@ -13,6 +13,7 @@ docker run \
 	-p $NEO4J_BOLT_PORT:$NEO4J_BOLT_PORT \
 	-v neo4j-v3:/data \
 	-v conf-neo4j-v3:/conf \
+	-v logs-neo4j-v3:/logs \
 	-e NEO4J_AUTH=$NEO4J_USERNAME/$NEO4J_PWD \
 	-e NEO4J_dbms_security_procedures_unrestricted=apoc.* \
 	-e NEO4J_apoc_import_file_enabled=true \
