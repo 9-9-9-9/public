@@ -4,7 +4,7 @@ source ./my-env.sh
 
 export POSTGRES_PORT=5432
 
-sudo docker run \
+docker run \
 	--name $CONTAINER_POSTGRES_9_NAME \
 	--restart unless-stopped \
 	-d \
