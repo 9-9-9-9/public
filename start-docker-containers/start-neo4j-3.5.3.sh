@@ -19,8 +19,6 @@ docker run \
 	-e NEO4J_apoc_export_file_enabled=true \
 	neo4j:3.5.3
 
-echo 'Waiting container (10s)'
-sleep 5
 echo 'Waiting container (5s)'
 sleep 5
 
