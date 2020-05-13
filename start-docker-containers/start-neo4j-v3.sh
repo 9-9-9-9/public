@@ -18,7 +18,7 @@ docker run \
 	-e NEO4J_dbms_security_procedures_unrestricted=apoc.* \
 	-e NEO4J_apoc_import_file_enabled=true \
 	-e NEO4J_apoc_export_file_enabled=true \
-	neo4j:3.5.3
+	neo4j:$DOCKER_IMG_NEO4J_V3
 
 echo 'Waiting container (5s)'
 sleep 5
