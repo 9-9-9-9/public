@@ -12,6 +12,7 @@ export 	CONTAINER_NEO4J_3_NAME=neo4j
 
 # Tags
 export DOCKER_IMG_NEO4J_V3=3.5.17
+export DOCKER_IMG_POSTGRES_V9=9.6
 
 # Custom
 export POSTGRES_DB_SALES_STRUCTURE=sales_structure
