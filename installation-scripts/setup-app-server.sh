@@ -6,9 +6,8 @@ then
 	exit 1
 fi
 
-which node
 # install nodejs
-if [ "$(which node)" == "/usr/bin/node" ]
+if [[ "$(which node)" =~ 'bin/node' ]]
 then
 	echo 'Node already installed'
 else
@@ -30,10 +29,9 @@ then
 	sudo npm install -g npm@6.13.7
 fi
 
-which ng
 # Install Angular CLI
 
-if [ "$(which ng)" == "/usr/bin/ng" ]
+if [[ "$(which ng)" =~ 'bin/ng' ]]
 then
 	echo 'Angular CLI already installed'
 else
