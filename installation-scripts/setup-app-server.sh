@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # install nodejs
-if [ "$(which node)" -eq "/usr/bin/node" ]
+if [ "$(which node)" == "/usr/bin/node" ]
 then
 	echo 'Node already installed'
 else
