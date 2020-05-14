@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./funcs/my-env.sh
+source ../_funcs/my-env.sh
 
 export POSTGRES_PORT=5432
 
@@ -16,4 +16,4 @@ docker run \
 nmap -sT 127.0.0.1 -p $POSTGRES_PORT
 
 echo 'Init db'
-./funcs/init-user-and-db-postgres.sh
+../_funcs/init-user-and-db-postgres.sh

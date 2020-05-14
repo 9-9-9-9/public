@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ./funcs/my-env.sh
+source ../_funcs/my-env.sh
 
 export NEO4J_HTTP_PORT=7474
 export NEO4J_BOLT_PORT=7687
