@@ -24,4 +24,10 @@ then
 fi
 
 # Install Angular CLI
-sudo npm install -g @angular/cli
+
+if [ "$(which ng)" == "/usr/bin/ng" ]
+then
+	echo 'Angular CLI already installed'
+else
+	sudo npm install -g @angular/cli
+fi
