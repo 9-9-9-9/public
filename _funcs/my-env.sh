@@ -5,7 +5,14 @@ echo 'Loading shared env'
 # Tags
 export DOCKER_IMG_NEO4J_V3=3.5.17
 export DOCKER_IMG_NEO4J_V4=4.0.4
+
 export DOCKER_IMG_POSTGRES_V9=9.6
+
+export DOCKER_IMG_ELASTICSEARCH_V6=6.8.9
+
+export DOCKER_IMG_CASSANDRA_V3=3.11.6
+
+export DOCKER_IMG_KONG_V2=2.0.4-ubuntu
 
 # Custom PostgreSQL
 
