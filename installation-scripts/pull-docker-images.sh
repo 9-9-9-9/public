@@ -1,6 +1,6 @@
 #!/bin/bash
 
-../_func/my-env.sh
+source ../_funcs/my-env.sh
 
 # Pull images
 echo 'Pulling neo4j images'
