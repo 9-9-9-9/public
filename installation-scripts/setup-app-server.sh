@@ -13,11 +13,15 @@ else
 fi
 
 # downgrade npm if version is 6.14.* which has bug with connection
+
 if [[ "$(npm --version)" =~ 6.13 ]]
 then
 	echo 'Good npm version'
 elif [[ "$(npm --version)" =~ 6.14 ]]
 then
 	echo 'Current version of npm is 6.14.* has bug and should be downgraded'
-	sudo npm install -g @angular/cli
+	sudo npm install -g npm@6.13.7
 fi
+
+# Install Angular CLI
+sudo npm install -g @angular/cli
