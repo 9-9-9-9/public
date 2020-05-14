@@ -29,5 +29,8 @@ export NEO4J_USERNAME=neo4j
 export NEO4J_PWD=1234567
 export CONTAINER_NEO4J_3_NAME=neo4j
 
+# Custom Elastic Search
+export CONTAINER_ELASTIC_6_NAME=elastic
+
 # Others
 export ENV_IS_LOADED_BY_MYENV='yes'
