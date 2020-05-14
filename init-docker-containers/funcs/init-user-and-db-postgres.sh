@@ -1,6 +1,10 @@
 #!/bin/bash
 
-source ./my-env.sh
+if [ -z "$ENV_IS_LOADED_BY_MYENV" ]
+then
+	echo 'Missing env from my-env.sh'
+	exit 1
+fi
 
 echo 'Setup postgres client'
 sudo yum install -y https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
