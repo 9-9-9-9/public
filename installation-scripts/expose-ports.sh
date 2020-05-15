@@ -27,7 +27,7 @@ then
 	expose 5432
 	
 	firewall-cmd --reload
-elif
+else
 	echo 'Can not find public zone'
 	exit 1
 fi
