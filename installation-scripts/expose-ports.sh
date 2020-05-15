@@ -1,5 +1,11 @@
 #!/bin/bash
 
+if [ "$EUID" -ne 0 ]
+then 
+	echo "Please run with sudo"
+	exit 1
+fi
+
 expose() {
 	firewall-cmd --zone=public --add-port=$1/tcp --permanent
 }
