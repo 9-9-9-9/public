@@ -1,7 +1,7 @@
 ### To setup on server
 ```
 cd installation-scripts
-./setup-server.sh
+./setup-docker-server.sh
 ./pull-docker-images.sh
 
 ./install-alias.sh
@@ -9,7 +9,7 @@ cd installation-scripts
 
 ##### Where
 ```
-setup-server.sh
+setup-docker-server.sh
 ```
 will install docker and setup to run docker without sudo
 

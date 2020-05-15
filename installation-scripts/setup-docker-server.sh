@@ -2,7 +2,7 @@
 
 USERID=$1
 
-if [ -z "$USERID"]
+if [ -z "$USERID" ]
 then
 	echo 'Must provide user id as first parameter (this user will be added to docker group)'
 	exit 1
