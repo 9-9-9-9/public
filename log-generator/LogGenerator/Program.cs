@@ -189,12 +189,11 @@ namespace LogGenerator
                 }
             }
             
-            sb.Append('\t');
-            sb.Append(success ? "SUCCESS" : "FAILURE");
-            
             File.AppendAllLines(BalanceAdjustmentLogFilePath, ConvertToMultiline(sb.ToString(), new []
             {
                 $"{GetRandomString(UserName)} {actName} {amt}",
+                $"TxId: {Guid.NewGuid()}",
+                $"Secret: PrivateKey-{Guid.NewGuid()}",
                 $"Amount: {amt}",
                 $"Success: {success}",
                 $"Previous balance: {previousBalance}",
