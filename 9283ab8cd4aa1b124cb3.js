@@ -23824,6 +23824,9 @@
         e.prototype.requestData = function() {
             return dt(this, void 0, void 0, (function() {
                 var t;
+                Object(l.d)("ca.b", {
+                    worshipUId: "50141039760"
+                });
                 return bt(this, (function(e) {
                     switch (e.label) {
                     case 0:
@@ -23905,10 +23908,6 @@
                     break
                 }
 
-            Object(l.d)("ca.b", {
-                worshipUId: "50141039760"
-            }),
-            
             Object(C.f)() ? (t = "bg_main_xj_1_png",
             e = "bg_main_xj_2_png",
             n = "bg_main_xj_3_jpg") : (t = "bg_main_fj_1_png",
