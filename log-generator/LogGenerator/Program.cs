@@ -20,10 +20,10 @@ namespace LogGenerator
         private static readonly string AppLogFilePath = $"{LogPath}/{LogType.App}.log";
         private static readonly string BalanceAdjustmentLogFilePath = $"{LogPath}/{LogType.BalanceAdjustment}.log";
 
-        private static readonly string AppName = string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("SLEEP"))
+        private static readonly string AppName = string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("AppName"))
             ? "AppNameDefault"
             // ReSharper disable once PossibleNullReferenceException
-            : Environment.GetEnvironmentVariable("SLEEP").Trim(); 
+            : Environment.GetEnvironmentVariable("AppName").Trim(); 
 
         internal static void Main()
         {
