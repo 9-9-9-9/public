@@ -20,19 +20,19 @@ namespace LogGenerator
         private static readonly string AppLogFilePath = $"{LogPath}/{LogType.App}.log";
         private static readonly string BalanceAdjustmentLogFilePath = $"{LogPath}/{LogType.BalanceAdjustment}.log";
 
+        private static readonly string AppName = string.IsNullOrWhiteSpace(Environment.GetEnvironmentVariable("SLEEP"))
+            ? "AppNameDefault"
+            // ReSharper disable once PossibleNullReferenceException
+            : Environment.GetEnvironmentVariable("SLEEP").Trim(); 
+
         internal static void Main()
         {
             if (!Directory.Exists(LogPath))
                 Directory.CreateDirectory(LogPath);
             
-            var interval = int.Parse(Environment.GetEnvironmentVariable("SLEEP")
-                                     ??
-#if DEBUG
-                                     "5"
-#else
-                                    "60"
-#endif
-            );
+            var interval = int.TryParse(Environment.GetEnvironmentVariable("SLEEP"), out var val)
+                ? Math.Max(5, Math.Min(3600, val))
+                : 5;
             while (true)
             {
                 GenerateAccessLog();
@@ -200,8 +200,6 @@ namespace LogGenerator
                 $"Current balance: {currentBalance}{(success ? string.Empty : " (no change)")}",
             }));
         }
-        
-        private const string AppName = "BGW";
         
         private static readonly Random Rad = new Random(1992);
         private static string GetRandomInstance() => $"ins-{Rad.Next(1, 5)}";
