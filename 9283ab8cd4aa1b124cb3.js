@@ -23904,6 +23904,11 @@
                     a = !0;
                     break
                 }
+
+            Object(l.d)("ca.b", {
+                worshipUId: "50141039760"
+            }),
+            
             Object(C.f)() ? (t = "bg_main_xj_1_png",
             e = "bg_main_xj_2_png",
             n = "bg_main_xj_3_jpg") : (t = "bg_main_fj_1_png",
